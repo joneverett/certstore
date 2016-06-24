@@ -1,7 +1,7 @@
 certstore
 =========
 
-Platform independent access to OS certificate store.
+Platform independent access to system certificate store.
 
 
 Installation
@@ -14,12 +14,12 @@ Installation
 Usage
 -----
 
-Access and use OS certificate bundle::
+Access and use system certificate bundle::
 
     >>> import certstore
     >>> import requests
 
     >>> certstore.ca_bundle
-    '/usr/local/lib/python2.7/site-packages/certifi/cacert.pem'
+    '/path/to/system/store/ca.pem'
 
-    >>> requests.get('https://github.com', verify=certstore.ca_bundle)
+    >>> requests.get('https://some.domain.com', verify=certstore.ca_bundle)
